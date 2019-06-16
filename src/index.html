@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Webpack</title>
+    <title>Florida for Export</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -38,9 +38,11 @@
     <!--.top-section-->
     <div class="top-section">
         <div class="top-video__wrap">
-            <video autoplay muted loop id="myVideo" class="top-section__video">
-                <source src="./video/22650889-preview.mp4" type="video/mp4">
-            </video>
+            <div class="top-video__cut">
+                <video autoplay muted loop id="myVideo" class="top-section__video">
+                    <source src="./video/22650889-preview.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="wrapper top-wrapper">
                 <div class="top-content__wrap">
                     <div class="logo-circle__overflow">
@@ -246,21 +248,25 @@
                 <form action="" class="contact-form">
                     <div class="contact-form__input">
                         <label for="name">Company Name:</label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" value="Company Name:">
                     </div>
                     <div class="contact-form__input">
                         <label for="email">Company Email:</label>
-                        <input type="text" name="email" id="email">
+                        <input type="text" name="email" id="email" value="Company Name:">
                     </div>
                     <div class="contact-form__textarea">
-                        <label for="message">Company Email:</label>
+                        <label for="message">Your Message:</label>
                         <textarea
                                 type="text"
                                 name="message"
                                 id="message"
                                 placeholder="Hello,
 We are looking to market our products in Kazakhstan using Postal Express flat rate shipping."
-                        ></textarea>
+                                value="Hello,
+We are looking to market our products in Kazakhstan using Postal Express flat rate shipping."
+
+                        >Hello,
+We are looking to market our products in Kazakhstan using Postal Express flat rate shipping.</textarea>
                     </div>
                     <button class="contact-form__btn" type="submit">send</button>
                 </form>
@@ -271,8 +277,10 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
         <div class="wrapper footer-wrapper">
             <div class="footer-left">&copy; 2019 Florida for Export, Inc.</div>
             <div class="footer-right">
-                <span>Design by</span>
-                <img src="./img/kemeo.png" alt="">
+                <a href="http://kemeodesign.com/en/" target="_blank">
+                    <span>Design by</span>
+                    <img src="./img/kemeo.png" alt="">
+                </a>
             </div>
         </div>
     </footer>
