@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+    <title>Webpack</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,500i|Montserrat:200,400,600,700|Oswald:300,400&display=swap"
+          rel="stylesheet">
+
+    <script>
+        var modernBrowser = (
+            'fetch' in window &&
+            'assign' in Object
+        );
+
+        if (!modernBrowser) {
+            var scriptElement = document.createElement('script');
+            var scriptElement2 = document.createElement('script');
+
+            scriptElement2.async = false;
+            scriptElement2.src = '/vendors~polyfills.bundle.js';
+            document.head.appendChild(scriptElement2);
+
+            scriptElement.async = false;
+            scriptElement.src = '/polyfills.bundle.js';
+
+            document.head.appendChild(scriptElement);
+        }
+    </script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <!--.top-section-->
+    <div class="top-section">
+        <div class="top-video__wrap">
+            <video autoplay muted loop id="myVideo" class="top-section__video">
+                <source src="./video/22650889-preview.mp4" type="video/mp4">
+            </video>
+            <div class="wrapper top-wrapper">
+                <div class="top-content__wrap">
+                    <div class="logo-circle__overflow">
+                        <div class="logo-circle">
+                            <img src="./img/logo.png" alt="logo">
+                        </div>
+                    </div>
+                    <div class="sky-circle">
+                        International Shipping to&nbsp;Kazakhstan
+                    </div>
+                    <div class="orange-circle">
+                        Starting from&nbsp;$2 a&nbsp;package
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--.program-section-->
+    <div class="program-section">
+        <div class="wrapper">
+            <div class="program-title__wrap">
+                <div class="line-left"></div>
+                <h2 class="program-title">Our Postal Express Programme</h2>
+                <p class="program-subtitle">Flat Rate Transborder Shopping and Shipping</p>
+            </div>
+            <div class="program-content__wrap">
+                <div class="program-content__item item-top"></div>
+                <div class="program-content__item item-top"></div>
+                <div class="program-content__item item-top"></div>
+                <div class="program-content__item item-top"></div>
+                <div class="program-content__item">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon1.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">No Custom Forms</h3>
+                    <p class="program-item__text">We use API & electronic forms for free proof of&nbsp;delivery</p>
+                </div>
+                <div class="program-content__item">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon2.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">Save Delivery</h3>
+                    <p class="program-item__text">We use poly bags, flats and packages for all&nbsp;services</p>
+                </div>
+                <div class="program-content__item">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon3.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">100% insured</h3>
+                    <p class="program-item__text">Included for the whole value and&nbsp;shipping</p>
+                </div>
+                <div class="program-content__item">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon4.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">Shipping Concierge</h3>
+                    <p class="program-item__text">24/7 phone and email customer support</p>
+                </div>
+                <div class="program-content__item item-bottom">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon5.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">Flat Rate Shipping</h3>
+                    <p class="program-item__text">Starting at $2 a package or $2 for each 0.22 lbs</p>
+                </div>
+                <div class="program-content__item item-bottom">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon6.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">Expedited Shipping</h3>
+                    <p class="program-item__text">We deliver in 5–7 days with signature</p>
+                </div>
+                <div class="program-content__item item-bottom">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon7.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">Flat Rate to All Destinations</h3>
+                    <p class="program-item__text">We deliver with signature to all destinations in&nbsp;Kazakhstan</p>
+                </div>
+                <div class="program-content__item item-bottom">
+                    <div class="program-item__img">
+                        <img src="./img/program-icon8.png" alt="">
+                    </div>
+                    <h3 class="program-item__title">Easy Refunds</h3>
+                    <p class="program-item__text">We do help our customers with affordable returns</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--.consolidate-section-->
+    <div class="consolidate-section">
+        <div class="wrapper">
+            <div class="consolidate-title__wrap">
+                <h3 class="consolidate-title">Consolidate & Save</h3>
+                <p class="consolidate-subtitle">Shipping 10 packages a day, consolidate your shipments in one package
+                    and <span style="font-weight: 500;">save 10%!</span></p>
+                <p class="consolidate-anno">All the recipients will be processed separately</p>
+            </div>
+            <div class="services-wrap">
+                <div class="services-title__wrap">
+                    <div class="line-left consolidate-line__left"></div>
+                    <h3 class="services-title__text">Services</h3>
+                </div>
+                <div class="services-content__wrap">
+                    <div class="services-content__left">
+                        <p>With our Postal Express program, you not only get flat rate shipping from US, you get local
+                            customer 24/7 service, loyal customers, easy returns at no additional cost. Postal Express
+                            is taking care all the way, from shipping to returns, from customer service to customer
+                            experience. So you can focus on sales.</p>
+                        <p>Cloth, shoes other merchandise — just ship from the USA to Kazakhstan in poly bags, no bulky
+                            packages needed. All shipments are insured and save.</p>
+                    </div>
+                    <div class="services-content__right">
+                        <img src="./img/postal-logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="howitworks-section">
+        <div class="howitwork-top__wrap">
+            <div class="wrapper howitwork-wrapper howitwork-afters">
+                <div class="howitwork-top__left">
+                    <div class="howitwork-wrapper__title posa">
+                        <div class="line-left howitworks-line__left"></div>
+                        <h2 class="howitworks-title">How It Works</h2>
+                    </div>
+                    <div class="howitwork-top__leftcontent howitwork-segment">
+                        <h4 class="howitwork-content__title">US Seller</h4>
+                        <p class="howitwork-content__text">Print your international shipping label, consolidate your packages in one box&nbsp;and ship them via USPS/FedEx to our shipping center in&nbsp;Florida</p>
+                    </div>
+                </div>
+                <div class="howitwork-top__right">
+                    <div class="howitwork-top__rightcontent howitwork-segment">
+                        <h4 class="howitwork-content__title">Warehouse</h4>
+                        <p class="howitwork-content__text">We sort and process your packages in&nbsp;our system, notify customers of the&nbsp;shipment, deliver to&nbsp;Lufthansa facility to dispatch. Processing is in the same day, dispatching is&nbsp;next day.</p>
+                    </div>
+                </div>
+                <div class="howitwork-after posa"></div>
+                <div class="howitwork-before posa"></div>
+
+            </div>
+        </div>
+        <div class="howitwork-bottom__wrap">
+            <div class="wrapper howitwork-wrapper">
+                <div class="howitwork-bottom__left howitwork-segment howitwork-segment__bottom">
+                    <h4 class="howitwork-content__title">Delivery to Kazakhstan</h4>
+                    <p class="howitwork-content__text">Transit for our shipments is 3–5 business days.</p>
+                </div>
+                <div class="howitwork-bottom__right howitwork-segment howitwork-segment__bottom">
+                    <h4 class="howitwork-content__title">Buyer’s residence</h4>
+                    <p class="howitwork-content__text">Customer deliveries within 1–2 business days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connections-section">
+        <div class="wrapper">
+            <div class="line-left connections-line__left"></div>
+            <h2 class="connections-title">Connections</h2>
+            <div class="connections-content-wrap">
+                <div class="connections-content__left">
+                    <div class="connections-item__title">Our Logistics Partners</div>
+                    <div class="connections-item__images">
+                        <img src="./img/fedex_logo.svg" class="connection-logo1" alt="">
+                        <img src="./img/kazpost_logo.svg" class="connection-logo2" alt="">
+                        <img src="./img/lufthansa_cargo_logo.svg" class="connection-logo3" alt="">
+                    </div>
+                </div>
+                <div class="connections-content__right">
+                    <div class="connections-item__title">We do express deliveries for</div>
+                    <div class="connections-item__images">
+                        <img src="./img/amazon_logo.svg" class="connection-logo4" alt="">
+                        <img src="./img/shopify_logo.svg" class="connection-logo5" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="consolidate-section flatrate-section">
+        <div class="wrapper">
+            <div class="consolidate-title__wrap flatrate-title__wrap">
+                <h3 class="consolidate-title flatrate-title">Flat Rate Shipping
+                    </h3>
+                <p class="consolidate-subtitle flatrate-subtitle">Starting from <span style="font-weight: 500;">2$</span> a package or <span style="font-weight: 500;">2$</span> for each 0.22 lbs</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="contact-section">
+        <div class="wrapper contact-wrapper">
+            <div class="line-left connections-line__left"></div>
+            <h2 class="connections-title">Contact</h2>
+            <div class="contact-subtitle">Contact us to expand your sales with our Postal Express Priority International flat rate service.</div>
+            <div class="contact-form__wrap">
+                <form action="" class="contact-form">
+                    <div class="contact-form__input">
+                        <label for="name">Company Name:</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="contact-form__input">
+                        <label for="email">Company Email:</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="contact-form__textarea">
+                        <label for="message">Company Email:</label>
+                        <textarea
+                                type="text"
+                                name="message"
+                                id="message"
+                                placeholder="Hello,
+We are looking to market our products in Kazakhstan using Postal Express flat rate shipping."
+                        ></textarea>
+                    </div>
+                    <button class="contact-form__btn" type="submit">send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper footer-wrapper">
+            <div class="footer-left">&copy; 2019 Florida for Export, Inc.</div>
+            <div class="footer-right">
+                <span>Design by</span>
+                <img src="./img/kemeo.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>
