@@ -7,12 +7,24 @@
 @media (max-width: 1130px) {
   .orange-circle {
     left: 10px;
+    &.contacts-orange-circle {
+      left: auto;
+    }
   }
+
+
 }
 
 @media (max-width: 1068px) {
   .wrapper {
-    width: 802px;
+    max-width: 802px;
+  }
+
+  .top-wrapper {
+    &:after,
+    &:before {
+      display: none;
+    }
   }
 
   .program-content__item {
@@ -31,6 +43,14 @@
     }
     &:nth-child(10) {
       height: 330px;
+    }
+  }
+
+  .consolidate-title__wrap {
+    clip-path: none;
+    width: 100%;
+    &:after {
+      display: none;
     }
   }
 
@@ -59,19 +79,23 @@
 
   .howitwork-top__wrap {
     height: auto;
+    .howitwork-segment {
+      height: 342px;
+    }
   }
 
   .howitwork-afters:before,
   .howitwork-afters:after,
   .howitwork-before,
-  .howitwork-after
-  {
+  .howitwork-after {
     display: none;
   }
 
   .howitwork-bottom__wrap {
     height: auto;
-
+    .howitwork-segment {
+      height: 170px;
+    }
   }
 
   .howitworks-section {
@@ -83,5 +107,147 @@
   .howitwork-top__right,
   .howitwork-bottom__right {
     align-self: auto;
+  }
+
+  .connections-section {
+    background: url(../img/map.png) no-repeat center 50px / contain;
+  }
+
+  .connection-logo2,
+  .connection-logo3 {
+    margin: 0 15px 15px 0;
+  }
+
+  .connection-logo4,
+  .connection-logo5 {
+    margin: 0 15px 15px 0;
+  }
+
+  .contacts-orange-circle {
+    left: auto;
+    right: 10px;
+    top: 130px;
+  }
+}
+
+@media (max-width: 820px) {
+  .wrapper {
+    max-width: 800px;
+  }
+
+  .sky-circle {
+    width: 378px;
+    height: 378px;
+    font-size: 46px;
+  }
+
+  .program-content__item {
+    &:nth-child(3) {
+      display: none;
+    }
+    &:nth-child(7) {
+      padding-top: 6px;
+      height: 330px;
+      .program-item__img {
+        height: 184px;
+      }
+    }
+  }
+
+  .program-title__wrap,
+  .consolidate-title__overlay,
+  .services-title__text,
+  .services-content__left,
+  .howitworks-title,
+  .connections-title,
+  .connections-content__left,
+  .contact-subtitle,
+  .contact-form__wrap {
+    padding-left: 40px;
+  }
+
+  .footer-left {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  .top-video__cut {
+    margin-left: -140px;
+  }
+
+  .program-title__wrap {
+  clip-path: none;
+    width: 100%;
+  }
+
+  .logo-circle {
+    width: 250px;
+    height: 250px;
+    right: 140px;
+  }
+
+  .sky-circle {
+    width: 288px;
+    height: 288px;
+    font-size: 36px;
+  }
+
+  .program-title__wrap ,
+  .consolidate-title__overlay,
+  .services-title__text,
+  //.services-title__wrap,
+  .howitworks-title,
+  .connections-title,
+  .connections-content__left,
+  .contact-subtitle,
+  .contact-form__wrap {
+    padding-left: 26px;
+    padding-right: 10px;
+    font-size: 40px;
+  }
+
+  .services-content__left {
+    padding-left: 26px;
+  }
+
+  .program-title,
+  .consolidate-title {
+    font-size: 38px;
+  }
+
+  .program-subtitle,
+  .consolidate-subtitle {
+    font-size: 20px;
+  }
+
+  .line-left {
+    height: 115px;
+  }
+
+  .consolidate-line__left {
+    height: 93px;
+  }
+
+  .services-content__left {
+    padding-right: 10px;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .program-content__item {
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(6) {
+      padding-top: 6px;
+      height: 330px;
+      .program-item__img {
+        height: 184px;
+      }
+    }
+
   }
 }
