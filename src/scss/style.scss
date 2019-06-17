@@ -68,7 +68,7 @@ body {
 .top-section__video {
   display: block;
   margin: auto;
-  width: 100%;
+  width: auto;
   max-height: 704px;
 }
 
@@ -269,10 +269,12 @@ body {
 .consolidate-title__wrap {
   height: 352px;
   width: 936px;
-  background: url("../img/img-title1.png") no-repeat right top;
+  background: url("../img/banner-image1.jpg") no-repeat right top;
+  background-attachment: fixed;
   margin-top: -35px;
   padding: 140px 60px 0;
   position: relative;
+  clip-path: polygon(0 0, 100% 0, 874px 100%, 0% 100%);
   &:after {
     content: '';
     width: 114px;
@@ -591,7 +593,8 @@ body {
 }
 
 .flatrate-title__wrap {
-  background: url("../img/img-title2.png") no-repeat right top;
+  background: url("../img/banner-image2.jpg") no-repeat right top;
+  background-attachment: fixed;
   padding-top: 173px;
   padding-bottom: 0;
   &:after {
@@ -641,6 +644,14 @@ body {
     border-left: 126px solid transparent;
     border-bottom: 710px solid #fff;
   }
+}
+
+.contacts-orange-circle {
+  bottom: auto;
+  left: auto;
+  top: 190px;
+  right: 90px;
+  z-index: 1;
 }
 
 .contact-subtitle {
