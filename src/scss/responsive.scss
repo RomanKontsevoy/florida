@@ -26,6 +26,10 @@
     }
   }
 
+  .program-content__wrap {
+    justify-content: flex-start;
+  }
+
   .program-content__item {
     &:nth-child(4) {
       display: none;
@@ -114,6 +118,12 @@
     width: 378px;
     height: 378px;
     font-size: 46px;
+  }
+
+  .program-content__wrap {
+    justify-content: center;
+    max-width: 534px;
+    margin: auto;
   }
 
   .program-content__item {

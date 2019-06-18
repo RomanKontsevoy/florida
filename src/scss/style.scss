@@ -293,7 +293,7 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(14deg, #000c17 0%, rgba(0, 0, 0, 0) 100%);
-  padding: 140px 60px 0;
+  padding: 140px 70px 0;
 
 }
 
@@ -492,22 +492,38 @@ body {
   padding: 165px 36px 0 117px;
   position: relative;
   &:before {
-    counter-increment: section;
-    content: counter(section);
+    content: '';
     position: absolute;
     top: 140px;
     left: 36px;
     width: 62px;
     height: 62px;
-    border: 2px solid #ccd4db;
     border-radius: 50%;
-    color: #ccd4db;
-    font-family: "Montserrat", sans-serif;
-    font-size: 52px;
-    font-weight: 200;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+}
+
+.howitwork-segment1 {
+  &:before {
+    background: url("../img/1.svg") no-repeat center top / 62px 62px;
+  }
+
+}
+
+.howitwork-segment2 {
+  &:before {
+    background: url("../img/2.svg") no-repeat center top / 62px 62px;
+  }
+}
+
+.howitwork-segment3 {
+  &:before {
+    background: url("../img/3.svg") no-repeat center top / 62px 62px;
+  }
+}
+
+.howitwork-segment4 {
+  &:before {
+    background: url("../img/4.svg") no-repeat center top / 62px 62px;
   }
 }
 
@@ -516,6 +532,12 @@ body {
   height: 100%;
   &:before {
     top: 28px;
+  }
+  &:nth-child(4) {
+    &:before {
+      background: url("../img/4.svg") no-repeat center top / 62px 62px;
+
+    }
   }
 }
 
