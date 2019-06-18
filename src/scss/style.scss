@@ -5,11 +5,11 @@
 }
 
 .top-wrapper {
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 704px;
   &:after {
     content: '';
     height: 100%;
@@ -28,7 +28,7 @@
     left: calc(100% - 138px);
     top: 0;
     border-left: 124px solid transparent;
-    border-bottom: 700px solid #d8dfe8;
+    border-bottom: 704px solid #d8dfe8;
   }
 }
 
@@ -51,10 +51,10 @@ body {
 
 .top-video__wrap {
   position: relative;
-  max-width: 1440px;
   width: 100%;
   margin: auto;
   background-color: #d8dfe8;
+  max-width: 1070px;
 }
 
 .top-video__cut {
@@ -70,6 +70,9 @@ body {
   margin: auto;
   width: auto;
   max-height: 704px;
+  position: fixed;
+  top: 0;
+
 }
 
 .top-content__wrap {
@@ -161,6 +164,11 @@ body {
 }
 
 /* program section */
+
+.program-section {
+  position: relative;
+  background: #fff;
+}
 
 .program-title__wrap {
   /* Style for "Rectangle" */
@@ -270,6 +278,11 @@ body {
 
 //consolidate-section
 
+.consolidate-section {
+  background: #fff;
+  position: relative;
+}
+
 .consolidate-title__wrap {
   height: 352px;
   width: 936px;
@@ -374,6 +387,7 @@ body {
 }
 
 .howitworks-section {
+  position: relative;
   background: #2d313c; /* Old browsers */
   background: -moz-linear-gradient(-60deg, #2d313c 0%, #3d424e 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-60deg, #2d313c 0%, #3d424e 100%); /* Chrome10-25,Safari5.1-6 */
@@ -544,7 +558,8 @@ body {
 /* .connections-section */
 
 .connections-section {
-  background: url("../img/map.png") no-repeat center top;
+  position: relative;
+  background: #fff url("../img/map.png") no-repeat center top;
 }
 
 .connections-line__left {
@@ -653,7 +668,11 @@ body {
 /*  contact-section  */
 
 .contact-section {
-  //background-color: #dae3ee;
+  position: relative;
+  background-color: #fff;
+}
+
+.contact-section__transparent {
   background-color: rgba(218, 227, 238, .4);
 }
 
@@ -796,6 +815,8 @@ body {
 /*  footer  */
 
 .footer {
+  position: relative;
+  background: #fff;
   padding: 58px 10px;
   color: #53575c;
   font-family: 'Montserrat', sans-serif;
