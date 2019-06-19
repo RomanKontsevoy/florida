@@ -41,6 +41,8 @@
     "@babel/polyfill": "^7.4.0",
     "@babel/runtime": "^7.4.2",
     "imports-loader": "^0.8.0",
+    "jquery": "^3.4.1",
+    "jquery-parallax.js": "^1.5.0",
     "postcss-preset-env": "^6.6.0",
     "promise-polyfill": "8.1.0",
     "vue": "^2.6.10",
