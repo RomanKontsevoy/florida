@@ -91,6 +91,7 @@ body {
   left: 0;
   overflow-y: hidden;
   z-index: 2;
+  background: linear-gradient(90deg, rgba(216,223,232,1) 0%,rgba(216,223,232,0) 25%,rgba(216,223,232,0) 100%);
 }
 
 .logo-circle {
@@ -161,6 +162,7 @@ body {
   bottom: 67px;
   left: -30px;
   line-height: 1.1;
+  z-index: 2;
 }
 
 /* program section */
@@ -286,7 +288,7 @@ body {
 .consolidate-title__wrap {
   height: 352px;
   width: 936px;
-  background: url("../img/banner-image1.jpg") no-repeat right top;
+  background: url("../img/banner-image1.jpg") no-repeat right top / cover;
   background-attachment: fixed;
   margin-top: -35px;
   position: relative;
