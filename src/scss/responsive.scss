@@ -67,7 +67,7 @@
     margin: auto;
   }
 
-    .howitwork-afters:before,
+  .howitwork-afters:before,
   .howitwork-afters:after,
   .howitwork-before,
   .howitwork-after {
@@ -264,7 +264,6 @@
     padding-right: 10px;
   }
 
-
   .services-content__left {
     padding-left: 26px;
   }
@@ -363,6 +362,7 @@
   .program-content__item {
     height: auto;
     padding-bottom: 30px;
+    &:nth-child(1),
     &:nth-child(2) {
       display: none;
     }
@@ -377,7 +377,7 @@
     &:nth-child(8),
     &:nth-child(9),
     &:nth-child(10),
-    &:nth-child(11){
+    &:nth-child(11) {
       height: auto;
     }
 
@@ -425,10 +425,12 @@
     width: 100%;
   }
 
-  .services-content__right img {
-    width: calc(100% - 20px);
-    max-width: 100%;
-    height: auto;
-    margin: auto;
+  .services-content__right {
+    img {
+      width: calc(100% - 20px);
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+    }
   }
 }
