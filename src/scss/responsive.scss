@@ -497,7 +497,11 @@
   }
 
   .line-left__program {
-    height: 124px;
+    height: 104px;
+  }
+
+  .program-title__wrap {
+    padding-top: 30px;
   }
 
   .program-title {
@@ -512,10 +516,6 @@
 @media all and (max-width: 441px) {
   .program-title__wrap {
     padding-right: 14px;
-  }
-
-  .line-left__program {
-    height: 124px;
   }
 
   .connection-logo3 {
