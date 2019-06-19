@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 66.3 66.3" style="enable-background:new 0 0 66.3 66.3;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#CCD4DB;}
-</style>
-<g>
-	<g>
-		<path class="st0" d="M25.8,15h11.4v36.3h-2.1V17.1h-9.3V15z"/>
-	</g>
-	<path class="st0" d="M33.2,66.3C14.9,66.3,0,51.4,0,33.2C0,14.9,14.9,0,33.2,0s33.2,14.9,33.2,33.2C66.3,51.4,51.4,66.3,33.2,66.3z
-		 M33.2,1.8C15.9,1.8,1.8,15.9,1.8,33.2s14.1,31.4,31.4,31.4c17.3,0,31.4-14.1,31.4-31.4S50.4,1.8,33.2,1.8z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.3 66.3" fill="#ccd4db"><path d="M25.8 15h11.4v36.3h-2.1V17.1h-9.3V15zm7.4 51.3C14.9 66.3 0 51.4 0 33.2 0 14.9 14.9 0 33.2 0s33.2 14.9 33.2 33.2c-.1 18.2-15 33.1-33.2 33.1zm0-64.5C15.9 1.8 1.8 15.9 1.8 33.2s14.1 31.4 31.4 31.4 31.4-14.1 31.4-31.4S50.4 1.8 33.2 1.8z"/></svg>

@@ -257,6 +257,10 @@ body {
     height: 402px;
     .program-item__img {
       height: 184px;
+      img {
+        width: 161px;
+        height: 161px;
+      }
     }
   }
 }
