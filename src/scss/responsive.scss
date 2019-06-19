@@ -145,12 +145,37 @@
   }
 
   .howitwork-segment {
-    padding: 165px 10px 30px 117px;
-    position: relative;
+    padding: 165px 10px 30px 0;
+    margin: 0 0 30px 117px;
+    border-bottom: 1px solid #545760;
+    &:before {
+      left: -77px;
+    }
+  }
+
+  .howitwork-bottom__right {
+    border-bottom: none;
   }
 
   .howitwork-segment__bottom {
     padding-top: 30px;
+  }
+
+  .howitwork-top__left,
+  .howitwork-top__right {
+    width: auto;
+    border-right: none;
+  }
+
+
+  .howitwork-top__leftcontent,
+  .howitwork-bottom__left,
+  .howitwork-top__rightcontent,
+  .howitwork-bottom__right {
+    align-self: auto;
+    border-right: none;
+      width: calc(100% - 117px);
+    max-width: 536px;
   }
 
   .howitwork-content__text {
@@ -187,13 +212,7 @@
     height: auto;
   }
 
-  .howitwork-top__left,
-  .howitwork-bottom__left,
-  .howitwork-top__right,
-  .howitwork-bottom__right {
-    align-self: auto;
-    border-right: none;
-  }
+
 
   .connections-section {
     background: #fff url(../img/map.png) no-repeat center 50px/740px;
@@ -255,9 +274,11 @@
   .connections-content__left,
   .contact-form__wrap {
     padding-left: 26px;
-    padding-right: 10px;
+    padding-right: 26px;
     font-size: 40px;
   }
+
+
 
   .contact-subtitle {
     padding-left: 26px;
@@ -266,6 +287,8 @@
 
   .services-content__left {
     padding-left: 26px;
+    padding-right: 26px;
+    padding-top: 20px;
   }
 
   .program-title,
@@ -286,6 +309,10 @@
     height: 92px;
   }
 
+  .flatrate-title__overlay {
+    padding-top: 217px;
+  }
+
   .consolidate-line__left {
     height: 93px;
   }
@@ -300,17 +327,45 @@
   }
 
   .connections-content__right {
-    padding-right: 10px;
     padding-left: 10px;
-  }
-
-  .services-content__left {
-    padding-right: 10px;
   }
 
 }
 
 @media (max-width: 609px) {
+
+  .connections-content__left {
+    padding: 0 10px;
+    margin: auto;
+    text-align: center;
+
+  }
+
+  .connections-item__title {
+    text-align: center;
+  }
+
+  .connection-logo1,
+  .connection-logo2,
+  .connection-logo3,
+  .connection-logo4,
+  .connection-logo5 {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  .connections-item__images {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .connections-content__right {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 30px auto 0;
+  }
+
   .contact-form__input,
   .contact-form__textarea {
     flex-direction: column;
@@ -319,6 +374,7 @@
       width: 100%;
       max-width: 400px;
       margin-bottom: 10px;
+      margin-top: 0;
     }
   }
 
@@ -348,20 +404,43 @@
   }
 
   .connections-section {
-    background: #fff url(../img/map.png) no-repeat center 50px/560px;
+    background: #fff url(../img/map_mob.png) no-repeat center 30px/520px;
   }
 
-  .connections-content__right {
-    padding-left: 26px;
-    margin-top: 30px;
+  .footer {
+    padding: 20px 10px 36px;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer-left {
+    text-align: center;
+    border-right: none;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  .footer-right {
+    justify-content: center;
+    span {
+      margin: 31px 0 0 0;
+    }
+    img {
+      margin-right: 0;
+    }
   }
 }
 
 @media (max-width: 533px) {
-
   .program-content__item {
     height: auto;
     padding-bottom: 30px;
+    border-left: none;
+    border-right: none;
     &:nth-child(1),
     &:nth-child(2) {
       display: none;
@@ -410,6 +489,18 @@
     height: 170px;
     font-size: 30px;
   }
+
+  .line-left__program {
+    height: 124px;
+  }
+
+  .program-title {
+    max-width: 400px;
+  }
+
+  .connections-section {
+    background: #fff url(../img/map_mob.png) no-repeat center 60px/ 400px;
+  }
 }
 
 @media all and (max-width: 441px) {
@@ -418,7 +509,7 @@
   }
 
   .line-left__program {
-    height: 173px;
+    height: 124px;
   }
 
   .connection-logo3 {
@@ -432,5 +523,11 @@
       height: auto;
       margin: auto;
     }
+  }
+}
+
+@media all and (max-width: 375px) {
+  .connections-section {
+    background: #fff url(../img/map_mob.png) no-repeat center 60px/ 380px;
   }
 }
