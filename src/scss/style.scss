@@ -12,6 +12,11 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  top: -100px;
+}
+
+.mob.mob {
+  display: none;
 }
 
 .contact-form__wrap {
