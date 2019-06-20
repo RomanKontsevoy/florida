@@ -146,7 +146,7 @@
 
   .howitwork-segment {
     padding: 165px 10px 30px 0;
-    margin: 0 0 30px 117px;
+    margin: 0 0 0 117px;
     border-bottom: 1px solid #545760;
     &:before {
       left: -77px;
@@ -446,8 +446,25 @@
     height: auto;
     padding-bottom: 30px;
     padding-top: 30px;
-    border-left: none;
-    border-right: none;
+    position: relative;
+    border: none;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      background: #d7dee6;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
     &:nth-child(1),
     &:nth-child(2) {
       display: none;
@@ -475,26 +492,31 @@
 
 @media all and (max-width: 479px) {
   .logo-circle {
-    width: 250px;
-    height: 250px;
+    width: 197px;
+    height: 197px;
     right: auto;
     left: 10px;
+    top: -30px;
+    img {
+      width: 136px;
+      height: 63px;
+    }
   }
 
   .sky-circle {
-    width: 268px;
-    height: 268px;
-    font-size: 36px;
+    width: 299px;
+    height: 299px;
+    font-size: 35px;
     right: -20px;
-    top: 300px;
+    top: 248px;
   }
 
   .orange-circle {
     left: -10px;
-    bottom: 40px;
-    width: 170px;
-    height: 170px;
-    font-size: 30px;
+    bottom: 50px;
+    width: 171px;
+    height: 171px;
+    font-size: 26px;
   }
 
   .line-left__program {
