@@ -291,6 +291,17 @@
     font-size: 38px;
   }
 
+  .consolidate-title__overlay {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .flatrate-subtitle {
+    margin-bottom: 0;
+  }
+
   .parallax {
     width: 767px;
   }
@@ -337,7 +348,7 @@
   }
 
   .connections-content-wrap {
-    padding-bottom: 80px;
+    padding-bottom: 70px;
     padding-top: 160px;
   }
 
@@ -345,6 +356,13 @@
     padding-left: 10px;
   }
 
+  .howitwork-bottom__right {
+    padding-bottom: 50px;
+  }
+
+  .services-content__right {
+    padding-bottom: 50px;
+  }
 }
 
 @media (max-width: 609px) {
