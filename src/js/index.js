@@ -13,5 +13,5 @@ var app = new Vue({
 
 var images = document.querySelectorAll('.parallax');
 var instance = new simpleParallax(images, {
-    scale: 1.7
+    scale: 1.5
 });
