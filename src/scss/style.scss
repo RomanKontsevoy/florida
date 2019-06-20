@@ -654,7 +654,7 @@ body {
 }
 
 .flatrate-title__wrap {
-  background: url("../img/banner-image2.jpg") no-repeat right top;
+  background: url("../img/banner-image2.jpg") no-repeat right top / cover;
   background-attachment: fixed;
   padding-bottom: 0;
   &:after {
