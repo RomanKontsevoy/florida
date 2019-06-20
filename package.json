@@ -45,6 +45,7 @@
     "jquery-parallax.js": "^1.5.0",
     "postcss-preset-env": "^6.6.0",
     "promise-polyfill": "8.1.0",
+    "simple-parallax-js": "^5.1.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.2",
     "whatwg-fetch": "^3.0.0"
