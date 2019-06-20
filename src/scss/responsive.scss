@@ -50,7 +50,6 @@
   }
 
   .consolidate-title__wrap {
-    clip-path: none;
     width: 100%;
     &:after {
       display: none;
@@ -278,7 +277,9 @@
     font-size: 40px;
   }
 
-
+  .consolidate-title__wrap {
+    width: 767px;
+  }
 
   .contact-subtitle {
     padding-left: 26px;
