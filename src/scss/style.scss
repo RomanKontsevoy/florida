@@ -257,10 +257,6 @@ body {
     height: 402px;
     .program-item__img {
       height: 184px;
-      img {
-        width: 161px;
-        height: 161px;
-      }
     }
   }
 }
@@ -270,6 +266,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 190px;
+  img {
+    width: 161px;
+    height: 161px;
+  }
 }
 
 .program-item__title {
