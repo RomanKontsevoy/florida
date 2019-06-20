@@ -14,6 +14,27 @@
   width: 100%;
 }
 
+.contact-form__wrap {
+  position: relative;
+}
+
+.screen-reader-response {
+  display: none;
+}
+
+div.wpcf7-response-output {
+  position: absolute;
+  top: calc(100% - 105px);
+  max-width: 400px;
+  margin-left: 171px;
+  text-align: center;
+  width: calc(100% - 52px);
+  color: #53575c;
+  font-family: Montserrat,sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
 .top-wrapper {
   top: 0;
   right: 0;
