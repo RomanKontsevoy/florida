@@ -5,5 +5,5 @@ import simpleParallax from 'simple-parallax-js';
 
 var images = document.querySelectorAll('.parallax');
 var instance = new simpleParallax(images, {
-    scale: 1.3
+    scale: 1.4
 });

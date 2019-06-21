@@ -31,13 +31,20 @@ div.wpcf7-response-output {
   position: absolute;
   top: calc(100% - 105px);
   max-width: 400px;
-  margin-left: 171px;
   text-align: center;
   width: calc(100% - 52px);
-  color: #53575c;
+  color: #ff0000;
   font-family: Montserrat,sans-serif;
   font-size: 18px;
   font-weight: 400;
+  margin: 2em 0 0 172px;
+  padding: 0.2em 1em;
+  border: none;
+}
+
+div.wpcf7-mail-sent-ok {
+  border: none;
+  color: #398f14;
 }
 
 .top-wrapper {
@@ -295,6 +302,8 @@ body {
   &.item-bottom {
     padding-top: 6px;
     height: 402px;
+    position: relative;
+    z-index: 2;
     .program-item__img {
       height: 184px;
     }
@@ -344,6 +353,7 @@ body {
   margin-top: -35px;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 874px 100%, 0% 100%);
+  z-index: 2;
   &:after {
     content: '';
     width: 114px;
@@ -358,7 +368,7 @@ body {
 .consolidate-title__overlay {
   width: 100%;
   height: 100%;
-  background: linear-gradient(14deg, #000c17 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(14deg, rgba(0, 12, 23, 0.6) 0%, rgba(0, 12, 23, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
   padding: 140px 70px 0;
   position: relative;
   z-index: 2;
