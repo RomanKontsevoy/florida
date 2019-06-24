@@ -447,8 +447,7 @@ body {
   background: -webkit-linear-gradient(-60deg, #2d313c 0%, #3d424e 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(120deg, #2d313c 0%, #3d424e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2d313c', endColorstr='#3d424e', GradientType=1);
-  height: 527px;
-  counter-reset: section;
+  height: 642px;
 }
 
 .howitwork-top__wrap {
@@ -463,7 +462,7 @@ body {
   /* срез справа [ */
   &:after {
     content: '';
-    height: 527px;
+    height: 642px;
     position: absolute;
     left: calc(100% + 86px);
     width: 100vw;
@@ -478,8 +477,8 @@ body {
     position: absolute;
     top: 0;
     right: -86px;
-    border-left: 93px solid transparent;
-    border-bottom: 527px solid #fff;
+    border-left: 114px solid transparent;
+    border-bottom: 642px solid #fff;
     z-index: 1;
   }
 }
@@ -510,6 +509,7 @@ body {
   display: flex;
   font-family: "Montserrat", sans-serif;
   height: 100%;
+  position: relative;
 }
 
 .howitwork-top__left, .howitwork-bottom__left, .howitwork-top__right, .howitwork-bottom__right {
@@ -520,7 +520,7 @@ body {
 }
 
 .howitwork-bottom__wrap {
-  height: 200px;
+  height: 314px;
 }
 
 .howitwork-wrapper__title {
@@ -843,8 +843,7 @@ body {
   }
 }
 
-.contact-form__btn {
-  margin-left: 173px;
+.btn {
   width: 400px;
   height: 60px;
   box-shadow: 0 3px 30px rgba(0, 132, 239, 0.5), inset 0 -1px 2px #53a0ff;
@@ -864,6 +863,17 @@ body {
   &:hover {
     box-shadow: 0 3px 15px rgba(0, 132, 239, 0.5), inset 0 -1px 1px #53a0ff;
   }
+}
+
+.contact-form__btn {
+  margin-left: 173px;
+}
+.howitwork-btn {
+  text-decoration: none;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*  footer  */

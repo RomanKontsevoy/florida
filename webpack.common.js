@@ -60,7 +60,8 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new VueLoaderPlugin(),
         new CopyPlugin([
-            {from: './src/video', to: './video'}
+            {from: './src/video', to: './video'},
+            {from: './src/ffe_tracking_sample.pdf', to: './ffe_tracking_sample.pdf'}
         ]),
         // new FaviconsWebpackPlugin('./src/img/favicon.png')
     ],
