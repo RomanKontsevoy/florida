@@ -13,6 +13,7 @@ function qs(a) {
 }
 
 let logoCircle = qs('.preloader-logo__circle');
+let logoCircleLocated = qs('.logo__circle.located');
 let counterCircle = qs('.counter-circle');
 let overlay = qs('.overlay');
 let loaded = 1;
@@ -38,9 +39,10 @@ function hidePreloader () {
         counterCircle.classList.add('loaded');
         overlay.classList.add('loaded');
         setTimeout(()=>{
-            logoCircle.style.display = 'none';
+            // logoCircle.style.display = 'none';
             counterCircle.style.display = 'none';
             overlay.style.display = 'none';
+            logoCircleLocated.style.opacity = 1;
         }, 1000)
     } else {
         setTimeout(hidePreloader, 10);

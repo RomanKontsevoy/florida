@@ -268,8 +268,10 @@
   .logo-circle {
     width: 250px;
     height: 250px;
-    right: auto;
-    left: 50px;
+    &.loaded {
+      right: auto;
+      left: 50px;
+    }
   }
 
   .sky-circle {
@@ -546,13 +548,20 @@
   .logo-circle {
     width: 197px;
     height: 197px;
-    right: auto;
-    left: 10px;
-    top: -30px;
     img {
       width: 136px;
       height: 63px;
     }
+    &.loaded {
+      right: auto;
+      left: 10px;
+      top: -30px;
+    }
+  }
+
+  .counter-circle {
+    top: calc(50% + 50px);
+    left: calc(50% - 10px);
   }
 
   .sky-circle {

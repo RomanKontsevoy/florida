@@ -959,7 +959,7 @@ body {
   top: calc(50% + 80px);
   left: calc(50% + 10px);
   position: fixed;
-  z-index: 5;
+  z-index: 6;
   opacity: .9;
   &.loaded {
     transition: 1s;
