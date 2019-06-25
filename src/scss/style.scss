@@ -975,11 +975,24 @@ body {
   z-index: 5;
   right: auto;
   &.loaded {
-    transition: 1s;
+    animation-name: toplase;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes toplase {
+  50% {
+    opacity: .5;
+  }
+  99% {
+    position: fixed;
+  }
+  to {
     position: absolute;
     top: -70px;
-    left: auto;
-    right: 187px;
+    left: calc(50% + 40px);
     transform: unset;
   }
 }
