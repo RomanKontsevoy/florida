@@ -34,7 +34,7 @@ div.wpcf7-response-output {
   text-align: center;
   width: calc(100% - 52px);
   color: #ff0000;
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-weight: 400;
   margin: 2em 0 0 172px;
@@ -116,7 +116,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, rgba(216,223,232,1) 0%,rgba(216,223,232,0) 25%,rgba(216,223,232,0) 100%);
+    background: linear-gradient(90deg, rgba(216, 223, 232, 1) 0%, rgba(216, 223, 232, 0) 25%, rgba(216, 223, 232, 0) 100%);
   }
 }
 
@@ -878,6 +878,7 @@ body {
 .contact-form__btn {
   margin-left: 173px;
 }
+
 .howitwork-btn {
   text-decoration: none;
   position: absolute;
@@ -928,5 +929,57 @@ body {
     width: 126px;
     height: 43px;
     margin: 10px 6px 0;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  background: #fff;
+  z-index: 5;
+  &.loaded {
+    transition: 1s;
+    opacity: 0;
+  }
+}
+
+.counter-circle {
+  text-align: center;
+  padding-top: 45px;
+  font-size: 26px;
+  font-weight: 300;
+  color: #fff;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to right, #51d1ee 0%, #4f9fff 50%, #5aaaff 100%);
+  border-radius: 50%;
+  top: calc(50% + 80px);
+  left: calc(50% + 10px);
+  position: fixed;
+  z-index: 5;
+  opacity: .9;
+  &.loaded {
+    transition: 1s;
+    transform: scale(0);
+  }
+}
+
+.preloader-logo__circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  right: auto;
+  &.loaded {
+    transition: 1s;
+    position: absolute;
+    top: -70px;
+    left: auto;
+    right: 187px;
+    transform: unset;
   }
 }
