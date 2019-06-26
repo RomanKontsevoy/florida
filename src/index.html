@@ -9,26 +9,142 @@
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300i,400,500i|Montserrat:200,400,600,700|Oswald:300,400&display=swap"
           rel="stylesheet">
 
-    <script>
-        var modernBrowser = (
-            'fetch' in window &&
-            'assign' in Object
-        );
+    <!--<style>-->
+        <!--.overlay {-->
+            <!--position: fixed;-->
+            <!--top: 0;-->
+            <!--width: 100vw;-->
+            <!--height: 100vh;-->
+            <!--left: 0;-->
+            <!--background: #fff;-->
+            <!--z-index: 5;-->
 
-        if (!modernBrowser) {
-            var scriptElement = document.createElement('script');
-            var scriptElement2 = document.createElement('script');
+        <!--}-->
 
-            scriptElement2.async = false;
-            scriptElement2.src = '/vendors~polyfills.bundle.js';
-            document.head.appendChild(scriptElement2);
+        <!--.overlay.loaded {-->
+            <!--transition: 1s;-->
+            <!--opacity: 0;-->
+        <!--}-->
 
-            scriptElement.async = false;
-            scriptElement.src = '/polyfills.bundle.js';
+        <!--.counter-circle {-->
+            <!--text-align: center;-->
+            <!--padding-top: 45px;-->
+            <!--font-size: 26px;-->
+            <!--font-weight: 300;-->
+            <!--color: #fff;-->
+            <!--width: 120px;-->
+            <!--height: 120px;-->
+            <!--background: linear-gradient(to right, #51d1ee 0%, #4f9fff 50%, #5aaaff 100%);-->
+            <!--border-radius: 50%;-->
+            <!--top: calc(50% + 80px);-->
+            <!--left: calc(50% + 10px);-->
+            <!--position: fixed;-->
+            <!--z-index: 6;-->
+            <!--opacity: .9;-->
+            <!--box-sizing: border-box;-->
+        <!--}-->
 
-            document.head.appendChild(scriptElement);
-        }
-    </script>
+        <!--.counter-circle.loaded {-->
+            <!--transition: 1s;-->
+            <!--transform: scale(0);-->
+            <!--opacity: 0;-->
+        <!--}-->
+
+        <!--.preloader-logo__circle {-->
+            <!--position: fixed;-->
+            <!--top: 50%;-->
+            <!--left: 50%;-->
+            <!--transform: translate(-50%, -50%);-->
+            <!--z-index: 5;-->
+            <!--right: auto;-->
+
+        <!--}-->
+
+        <!--.preloader-logo__circle.loaded {-->
+            <!--animation-name: toplase;-->
+            <!--animation-duration: 1s;-->
+            <!--animation-timing-function: ease-in-out;-->
+            <!--animation-fill-mode: forwards;-->
+        <!--}-->
+
+        <!--.preloader-logo__circle.showen-previously {-->
+            <!--position: absolute;-->
+            <!--top: -70px;-->
+            <!--left: calc(50% + 40px);-->
+            <!--transform: unset;-->
+        <!--}-->
+
+        <!--@keyframes toplase {-->
+            <!--50% {-->
+                <!--opacity: .5;-->
+            <!--}-->
+            <!--99% {-->
+                <!--position: fixed;-->
+            <!--}-->
+            <!--to {-->
+                <!--position: absolute;-->
+                <!--top: -70px;-->
+                <!--left: calc(50% + 40px);-->
+                <!--transform: unset;-->
+            <!--}-->
+        <!--}-->
+
+        <!--@media (max-width: 1068px) {-->
+            <!--.logo-circle.showen-previously {-->
+                <!--left: calc(50% - 140px);-->
+                <!--transform: translate(0);-->
+            <!--}-->
+
+            <!--.logo-circle.showen-previously {-->
+                <!--animation: none;-->
+            <!--}-->
+        <!--}-->
+
+        <!--@media all and (max-width: 767px) {-->
+            <!--.logo-circle {-->
+                <!--width: 250px;-->
+                <!--height: 250px;-->
+
+            <!--}-->
+
+            <!--.logo-circle.loaded,-->
+            <!--.logo-circle.showen-previously {-->
+                <!--animation: none;-->
+                <!--transform: unset;-->
+                <!--top: -30px;-->
+                <!--right: auto;-->
+                <!--left: 50px;-->
+            <!--}-->
+
+            <!--.logo-circle.loaded {-->
+                <!--transition: 1s ease-in-out;-->
+            <!--}-->
+
+        <!--}-->
+
+        <!--@media all and (max-width: 479px) {-->
+            <!--.logo-circle {-->
+                <!--width: 197px;-->
+                <!--height: 197px;-->
+
+            <!--}-->
+
+            <!--.logo-circle img {-->
+                <!--width: 136px;-->
+                <!--height: 63px;-->
+            <!--}-->
+
+            <!--.logo-circle.showen-previously,-->
+            <!--.logo-circle.loaded {-->
+                <!--right: auto;-->
+                <!--left: 10px;-->
+                <!--top: -30px;-->
+            <!--}-->
+        <!--}-->
+
+
+    <!--</style>-->
+
 
 </head>
 <body>
@@ -47,9 +163,9 @@
             <div class="wrapper top-wrapper">
                 <div class="top-content__wrap">
                     <!--<div class="logo-circle__overflow">-->
-                        <!--<div class="logo-circle located" >-->
-                            <!--<img src="./img/florida_for_export_logo.svg" alt="logo">-->
-                        <!--</div>-->
+                    <!--<div class="logo-circle located" >-->
+                    <!--<img src="./img/florida_for_export_logo.svg" alt="logo">-->
+                    <!--</div>-->
 
                     <!--</div>-->
                     <div class="sky-circle">
@@ -324,6 +440,59 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
 
 </div>
 
+<script>
+    /* preloader [ */
+    function qs(a) {
+        return document.querySelector(a);
+    }
+
+    var logoCircle = qs('.preloader-logo__circle');
+    var logoCircleLocated = qs('.logo__circle.located');
+    var counterCircle = qs('.counter-circle');
+    var video = qs('#myVideo');
+    var imagesToLoad = document.querySelectorAll('img, #myVideo'),
+        imagesTotalCount = imagesToLoad.length,
+        imagesLoadedCount = 0;
+    var overlay = qs('.overlay');
+
+    if (!window.localStorage.getItem('preloaderIsShown', true)) {
+        [].forEach.call(imagesToLoad, function (el, i) {
+            var imageClone = new Image();
+            imageClone.onload = imageLoaded;
+            imageClone.onerror = imageLoaded;
+            imageClone.src = el.src;
+        });
+        window.localStorage.setItem('preloaderIsShown', true);
+    } else {
+        logoCircle.classList.add('showen-previously');
+        counterCircle.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+
+    function imageLoaded() {
+        imagesLoadedCount++;
+        counterCircle.textContent = (((100 / imagesTotalCount) * imagesLoadedCount) << 0) + '%';
+        if (imagesLoadedCount >= imagesTotalCount) {
+            setTimeout(function () {
+                hidePreloader();
+            }, 1000)
+        }
+    }
+
+    function hidePreloader() {
+        logoCircle.classList.add('loaded');
+        counterCircle.classList.add('loaded');
+        overlay.classList.add('loaded');
+        video.currentTime = 0;
+        setTimeout(function () {
+            // logoCircle.style.display = 'none';
+            counterCircle.style.display = 'none';
+            overlay.style.display = 'none';
+        }, 1000)
+    }
+
+    /* ] preloader */
+</script>
 
 </body>
 </html>

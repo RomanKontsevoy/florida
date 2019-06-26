@@ -63,6 +63,6 @@ module.exports = {
             {from: './src/video', to: './video'},
             {from: './src/ffe_tracking_sample.pdf', to: './ffe_tracking_sample.pdf'}
         ]),
-        // new FaviconsWebpackPlugin('./src/img/favicon.png')
+        new FaviconsWebpackPlugin('./src/img/ms-icon-310x310.png')
     ],
 };
