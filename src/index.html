@@ -457,10 +457,17 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
 
     if (!window.localStorage.getItem('preloaderIsShown', true)) {
         [].forEach.call(imagesToLoad, function (el, i) {
-            var imageClone = new Image();
-            imageClone.onload = imageLoaded;
-            imageClone.onerror = imageLoaded;
-            imageClone.src = el.src;
+            if (el.tagName.toLowerCase() === 'video') {
+                var videoClone = document.createElement("video");
+                videoClone.setAttribute("src", el.children[0].src);
+                videoClone.oncanplaythrough = imageLoaded;
+                videoClone.onerror = imageLoaded;
+            } else {
+                var imageClone = new Image();
+                imageClone.onload = imageLoaded;
+                imageClone.onerror = imageLoaded;
+                imageClone.src = el.src;
+            }
         });
         window.localStorage.setItem('preloaderIsShown', true);
     } else {
@@ -469,7 +476,8 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
         overlay.style.display = 'none';
     }
 
-    function imageLoaded() {
+    function imageLoaded(e) {
+        console.log(e);
         imagesLoadedCount++;
         counterCircle.textContent = (((100 / imagesTotalCount) * imagesLoadedCount) << 0) + '%';
         if (imagesLoadedCount >= imagesTotalCount) {
