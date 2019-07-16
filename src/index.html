@@ -502,7 +502,10 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
         logoCircle.classList.add('loaded');
         counterCircle.classList.add('loaded');
         overlay.classList.add('loaded');
-        video.currentTime = 0;
+        console.log(video.currentTime);
+        if (video && video.currentTime) {
+            video.currentTime = 0;
+        }
         setTimeout(function () {
             logoCircle.classList.remove('loaded');
             logoCircle.classList.add('showen-previously');
