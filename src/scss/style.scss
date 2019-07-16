@@ -354,6 +354,7 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 874px 100%, 0% 100%);
   z-index: 2;
+  overflow: hidden;
   &:after {
     content: '';
     width: 114px;

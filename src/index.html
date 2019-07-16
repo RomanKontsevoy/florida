@@ -452,7 +452,8 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
     var video = qs('#myVideo');
     var imagesToLoad = document.querySelectorAll('img, #myVideo'),
         imagesTotalCount = imagesToLoad.length,
-        imagesLoadedCount = 0;
+        imagesLoadedCount = 0,
+        videoIsLoaded = false;
     var overlay = qs('.overlay');
 
     if (!window.localStorage.getItem('preloaderIsShown', true)) {
@@ -460,8 +461,14 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
             if (el.tagName.toLowerCase() === 'video') {
                 var videoClone = document.createElement("video");
                 videoClone.setAttribute("src", el.children[0].src);
-                videoClone.oncanplaythrough = imageLoaded;
-                videoClone.onerror = imageLoaded;
+                videoClone.oncanplaythrough = videoLoaded;
+                videoClone.onerror = videoLoaded;
+                setTimeout(function () {
+                   if (!videoIsLoaded) {
+                       console.log('videoIsLoaded: ', videoIsLoaded);
+                       videoLoaded();
+                   }
+                }, 3000);
             } else {
                 var imageClone = new Image();
                 imageClone.onload = imageLoaded;
@@ -476,8 +483,7 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
         overlay.style.display = 'none';
     }
 
-    function imageLoaded(e) {
-        console.log(e);
+    function imageLoaded() {
         imagesLoadedCount++;
         counterCircle.textContent = (((100 / imagesTotalCount) * imagesLoadedCount) << 0) + '%';
         if (imagesLoadedCount >= imagesTotalCount) {
@@ -487,13 +493,19 @@ We are looking to market our products in Kazakhstan using Postal Express flat ra
         }
     }
 
+    function videoLoaded () {
+        videoIsLoaded = true;
+        imageLoaded();
+    }
+
     function hidePreloader() {
         logoCircle.classList.add('loaded');
         counterCircle.classList.add('loaded');
         overlay.classList.add('loaded');
         video.currentTime = 0;
         setTimeout(function () {
-            // logoCircle.style.display = 'none';
+            logoCircle.classList.remove('loaded');
+            logoCircle.classList.add('showen-previously');
             counterCircle.style.display = 'none';
             overlay.style.display = 'none';
         }, 1000)
